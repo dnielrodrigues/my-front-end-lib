@@ -1,0 +1,18 @@
+/* ICONES */
+@import url("http://weloveiconfonts.com/api/?family=entypo");
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+// COMO APLICAR NO HTML: http://www.entypo.com/characters/
+
+// OPEN SANS
+@font-face {
+    font-family: 'kievit';
+    src: url('../fonts/kievit/ufonts.com_kievit_regular_1-webfont.eot');
+    src: url('../fonts/kievit/ufonts.com_kievit_regular_1-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/kievit/ufonts.com_kievit_regular_1-webfont.woff') format('woff'),
+         url('../fonts/kievit/ufonts.com_kievit_regular_1-webfont.ttf') format('truetype'),
+         url('../fonts/kievit/ufonts.com_kievit_regular_1-webfont.svg#kievitregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

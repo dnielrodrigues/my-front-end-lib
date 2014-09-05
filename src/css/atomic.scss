@@ -1,0 +1,63 @@
+//  GERAL
+body{font-size:14px;font-family:'kievit';color:$cor-2;}
+/*
+link: inicial
+hover: passar do mouse
+visited: visitado
+active: licando
+*/
+a,a:link{color:$cor-1;}
+a:hover{color:$cor-2;}
+a:active{color:$cor-1;}
+a:visited{color:$cor-2;}
+.pictogram{font-family:'entypo';}
+
+// GRID
+@mixin largura-coluna($c) {
+    width: ( ($c * 40px) / 960px * 100%) + ( ( ( $c - 1 ) * 20px ) / 960px * 100% );
+    // CALCULA O GRID DE ACORDO COM O NUMERO DE COLUNAS PASSADO NO PARAMETRO "$C"
+}
+.ctn{max-width: 960px;width: 80%;margin: 0 auto;position: relative;}
+.ctn-full{width: 100%;margin: 0 auto;position: relative;}
+.colunas{margin-left: 10px / 960px * 100%; margin-right: 10px / 960px * 100%; position: relative;float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.colunas-1 {@include largura-coluna(1);  @extend .colunas;}
+.colunas-2 {@include largura-coluna(2);  @extend .colunas;}
+.colunas-3 {@include largura-coluna(3);  @extend .colunas;}
+.colunas-4 {@include largura-coluna(4);  @extend .colunas;}
+.colunas-5 {@include largura-coluna(5);  @extend .colunas;}
+.colunas-6 {@include largura-coluna(6);  @extend .colunas;}
+.colunas-7 {@include largura-coluna(7);  @extend .colunas;}
+.colunas-8 {@include largura-coluna(8);  @extend .colunas;}
+.colunas-9 {@include largura-coluna(9);  @extend .colunas;}
+.colunas-10{@include largura-coluna(10); @extend .colunas;}
+.colunas-11{@include largura-coluna(11); @extend .colunas;}
+.colunas-12{@include largura-coluna(12); @extend .colunas;}
+.colunas-13{@include largura-coluna(13); @extend .colunas;}
+.colunas-14{@include largura-coluna(14); @extend .colunas;}
+.colunas-15{@include largura-coluna(15); @extend .colunas;}
+.colunas-16{@include largura-coluna(16); @extend .colunas;}
+
+/* CLASSES BASICAS */
+.b{border: none; /*background: $cor-secundaria;*/ color: #fff; font-size: 1.4em; line-height: 15px; margin: 0;display: block;float: left;text-decoration: none;cursor: pointer;padding: 15px;}
+.b-destaq{@extend .b;@extend .fonte-regular;/*background: $cor-primaria;*/display: block;}
+.b-pri{@extend .b;}
+.b-sec{@extend .b;background: #a4acb1;padding: 10px;margin: 10px;}
+.i{border: 0; display: block; overflow: hidden;text-indent: -5000px;}
+.l{/*color: $cor-secundaria;*/text-decoration: underline;}
+.l-destaq{@extend .l;font-size: 1.6em;}
+.f{position: relative;}
+.c{padding: 10px;/*border: 1px solid $cor-borda;*/float: left;margin: 0;}
+.s{background: #ddd; border: none; height: 32px; margin: 0; padding: 0;}
+
+
+
+
+
+
+
+
+

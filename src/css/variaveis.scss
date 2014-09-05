@@ -1,0 +1,20 @@
+/* VARIAVEIS */
+
+$cor-1: #00214c; //azul-marinho
+$cor-2: #00386a; //azul
+$cor-3: #666666; //cinza
+$cor-tributaria: #771938; //vermelho
+$cor-societaria: #154a90; //azul
+$cor-financeira:#26b797; //verde
+$cor-ceara:#277fb5; //azul
+$cor-bg-destaq: #edf0f0;
+$cor-borda: #cdd1d2;
+
+// FONTE DEFAULT
+.fonte{font-style: normal;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
+.fonte-light{@extend .fonte;font-family: 'Open Sans';  font-weight: 300;}
+.fonte-regular{@extend .fonte;font-family: 'Open Sans'; font-weight: 400;}
+.fonte-bold{@extend .fonte;font-family: 'Open Sans'; font-weight: 600;}
+.fonte-black{@extend .fonte;font-family: 'Open Sans'; font-weight: 800;}
+
+//FONTE ICONES

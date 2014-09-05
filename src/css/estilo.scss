@@ -1,0 +1,110 @@
+// TOPO
+.topo{
+    @extend .ctn-full;background: $cor-1;height: 140px;}
+.logo{width: 235px; height: 80px; position: absolute; top: 30px; left: 30px;}
+.bg-extra-1{position: absolute; width: 100%; height: 10px; top: 150px; background: $cor-1;}
+
+// TOPO - MENU PRINCIPAL
+.menu-primario{position:absolute;bottom: 0;right: 0;width: 810px;}
+.l-menu-pri-destaq{/*border-bottom: 5px solid #3f5979;*/ padding-bottom: 35px;border-bottom: 5px solid $cor-1 + #333;}
+.home .menu-pri-item.home a.l-menu-pri,
+.quem-somos .menu-pri-item.quem-somos a.l-menu-pri,
+.area-de-atuacao .menu-pri-item.area-de-atuacao a.l-menu-pri,
+.profissionais .menu-pri-item.profissionais a.l-menu-pri,
+.clientes .menu-pri-item.clientes a.l-menu-pri,
+.grupo .menu-pri-item.grupo a.l-menu-pri,
+.contato .menu-pri-item.contato a.l-menu-pri{@extend .l-menu-pri-destaq}
+.menu-pri-item{
+    display:inline;
+
+    a.l-menu-pri {
+        float: left; color: #fff; font-size: 1.3em; padding: 40px 15px;
+        &:hover{
+            background: $cor-1; /* Old browsers */
+            background: -moz-linear-gradient(top,  $cor-1 60%, $cor-1+#111 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(60%,$cor-1), color-stop(100%,$cor-1+#111)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  $cor-1 60%,$cor-1+#111 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  $cor-1 60%,$cor-1+#111 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  $cor-1 60%,$cor-1+#111 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  $cor-1 60%,$cor-1+#111 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$cor-1', endColorstr='$cor-1 + #111',GradientType=0 ); /* IE6-9 */
+            color:$cor-1+#999;
+        }
+    }
+
+    // submenu
+    .ctn-sub-menu-pri{height: 0px;overflow:hidden;}
+    .sub-menu-pri-item{}
+    a.l-sub-menu-pri{}
+}
+
+// TOPO - MENU SECUNDARIO
+.menu-secundario{position: absolute; top: 40px; right: 60px; z-index: 300;}
+.menu-sec-item{float:left;padding-right:10px;margin-right:10px;}
+.menu-sec-lingua{@extend .menu-sec-item;}
+.menu-sec-lingua-last{@extend .menu-sec-item;border-right:1px solid #fff;}
+.menu-sec-social-media{@extend .menu-sec-item;}
+.l-menu-sec-item{width: 13px; height: 13px; padding: 3px;
+    &:hover{opacity: 0.5;}
+}
+.l-menu-sec-ingles{@extend .l-menu-sec-item;@extend .i;right: 80px;background: url(../images/i-english.jpg);}
+.l-menu-sec-linkedin{@extend .l-menu-sec-item;right: 120px;background:#fff;margin-top: 0;float: left;height:14px;
+    .i-linkedin{@extend .pictogram;color:#007bb6;}
+}
+
+// SLIDER HOME
+.slider-home{@extend .ctn-full;background: url(../images/bg-slider.png) top right no-repeat #cacdd7;height:540px;overflow:hidden;}
+.sli-home-palco{height:100%;}
+.item-slider{height:100%;opacity: 0;display:block;}
+.item-slider-tributaria{
+    @extend .item-slider;
+    .tit-depoimento-slider{color:$cor-tributaria;}
+}
+.item-slider-societaria{
+    @extend .item-slider;
+    .tit-depoimento-slider{color:$cor-societaria;}
+}
+.item-slider-financeira{
+    @extend .item-slider;
+    .tit-depoimento-slider{color:$cor-financeira;}
+}
+.item-slider-ceara{
+    @extend .item-slider;
+    .tit-depoimento-slider{color:$cor-ceara;}
+}
+.tit-depoimento-slider{position: absolute; top: 30%; left: 10%; width: 40%;font-size:2em;}
+.autor-slider{color:$cor-3;font-size:0.8em; display: block; margin-top: 10px;}
+.foto-slider{position: absolute; right: 0; top: 0;height:100%;width: auto;}
+
+// SLIDER HOME - THUMBS
+.sli-thumbs{position: absolute; bottom: 0; background: #fff;width: 100%;}
+.l-sli-thumb{padding: 30px 0; display: block; float: left; width: 25%; text-align: center;font-size:1.3em;
+    &:hover{border-bottom:5px solid #666;padding:30px 0 25px 0;}
+}
+.l-sli-thumb-tributaria{@extend .l-sli-thumb;}
+.l-sli-thumb-societaria{@extend .l-sli-thumb;}
+.l-sli-thumb-financeira{@extend .l-sli-thumb;}
+.l-sli-thumb-ceara{@extend .l-sli-thumb;}
+
+
+// SLIDER HOME - STATUS
+.sl-home-1{opacity:1;}
+.sl-home-2{}
+.sl-home-3{}
+.sl-home-4{}
+
+//RODAPE
+.rodape{@extend .ctn-full;}
+.rodape .l-app{
+    color: #989898; line-height: 30px; padding: 20px; opacity: 1; float: left;
+    &:hover{
+        opacity: 0.5;
+    }
+}
+.rodape .l-app .i-apple{float:left;margin-right: 20px;}
+
+
+
+
+
+
