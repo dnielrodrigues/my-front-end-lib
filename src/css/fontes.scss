@@ -37,7 +37,17 @@
     font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"], [class*=" icon-"], .icon {
+    /*
+     * foi inserida a classe ".icon" neste item tbm para não precisar usar diretamente
+     * a classe ".icon-nome-do-icone". Isso permite usar "@extend .nome-do-icone" na classe da
+     * tag e não aplicar diretamente a classe do icone na tag. Bastando usar tbm "@extend .icon"
+     * (que já está na classe .i e ".i-tamanho" que consta no atomic.scss, bastando apenas usar dessas:
+     *      @extend .i-big
+     *      @extend .i-medium
+     *      @extend .i-small
+     * ).
+     */
     font-family: 'icomoon';
     speak: none;
     font-style: normal;
@@ -46,7 +56,7 @@
     text-transform: none;
     line-height: 1;
 
-    /* Better Font Rendering =========== */
+    /* Melhorar renderização */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
