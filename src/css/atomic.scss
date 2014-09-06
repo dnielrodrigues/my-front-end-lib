@@ -41,6 +41,13 @@ a:visited{color:$cor-2;}
 .colunas-15{@include largura-coluna(15); @extend .colunas;}
 .colunas-16{@include largura-coluna(16); @extend .colunas;}
 
+// BOX SIZING
+body{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 /* CLASSES BASICAS */
 .b{border: none; /*background: $cor-secundaria;*/ color: #fff; font-size: 1.4em; line-height: 15px; margin: 0;display: block;float: left;text-decoration: none;cursor: pointer;padding: 15px;}
 .b-destaq{@extend .b;@extend .fonte-regular;/*background: $cor-primaria;*/display: block;}
