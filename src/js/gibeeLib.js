@@ -10,6 +10,20 @@ var gibeeLib = {
         //limpar cache do browser
         window.location.reload(true);
     },
+    
+    //EXCLUIR ELEMENTO HTML
+    deleteNodeElement : function(e){
+        e.parentNode.removeChild(e);
+    },
+    
+    //INSERIR CLASSE NO MAPA DO GOOGLE PARA PERMITIR ESTILO
+    googlemapsIncludeClass : function(parentElementId,mapClass){
+        var parent = document.getElementById(parentElementId);
+        if (parent!=null) {,
+            var childrens = parent.childNodes;
+            childrens[0].className = mapClass;
+        };
+    },
 
     changeClassOnClick : function(args){
         /*
