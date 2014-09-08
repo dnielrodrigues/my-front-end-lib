@@ -23,8 +23,11 @@ module.exports = function(grunt) {
         },
         files: {
           'build/index.php' : 'src/index.php',
-          'build/topo.php' : 'src/topo.php',
-          'build/rodape.php' : 'src/rodape.php'
+          'build/header.php' : 'src/header.php',
+          'build/footer.php' : 'src/footer.php',
+          'build/components.php' : 'src/components.php',
+          'build/documentarion.php' : 'src/documentarion.php',
+          'build/components.php' : 'src/components.php'
         }
       }
     },

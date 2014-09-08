@@ -25,6 +25,15 @@ var gibeeLib = {
         };
     },
 
+    testElement : function( elemId ){
+        //testa se elemento html existe
+        if (document.getElementById(elemId)!=null) {
+            return true;
+        }else{
+            return false;
+        }
+    },
+
     changeClassOnClick : function(args){
         /*
          * TROCA CLASSE DE UM ELEMENTO HTML AO CLICAR NO BOTAO
@@ -32,11 +41,12 @@ var gibeeLib = {
          *      bId : id do botao para clique
          *      targetId : id do elemento alvo que terá a classe trocada
          *      newClass : classe para troca
+         * OBS: diferente da próxima função, ela só responde ao primeiro click...
          */
         var argsExemplo = {
             bId : "button-element-id",
             targetId : "element-target-id-1",
-            newClass : "initial-class"
+            newClass : "new-class"
         };
 
         if ( gibeeLib.testElement(args.bId) & gibeeLib.testElement(args.targetId) ) {
@@ -46,16 +56,12 @@ var gibeeLib = {
             //dispara evento clique
             $b.addEventListener('click', function() {
                 //seta a classe correta
-                if ( $target.className == args.class1) {
-                    $target.className = args.class1;
-                } else{
-                    $target.className = args.class2;
-                };
+                $target.className = args.newClass;
             }, true);
         };
     },
 
-    DoubleChangeClassOnClick : function(args){
+    doubleChangeClassOnClick : function(args){
         /*
          * TROCA CLASSE DE UM ELEMENTO HTML AO CLICAR NO BOTAO E RETORNA AO CLICAR NOVAMENTE
          * atributos do objeto/parametro "args":
@@ -79,27 +85,17 @@ var gibeeLib = {
             $b.addEventListener('click', function() {
                 //seta a classe correta
                 if ( $target.className == args.class1) {
-                    $target.className = args.class1;
-                } else{
                     $target.className = args.class2;
+                } else{
+                    $target.className = args.class1;
                 };
             }, true);
         };
     },
 
-    testElement : function( elemId ){
-        //testa se elemento html existe
-        if (document.getElementById(elemId)!=null) {
-            return true;
-        }else{
-            return false;
-        }
-    },
-
-    setHeight : function( elemId, h, unit ){        
+    setHeight : function( elemId, h, unit ){
         /*
          * Setar altura do elemento
-         *
          * var elemId = id do elemento que recebera altura
          * var h = altura
          * var unit = unidade da altura (%, px, em)
@@ -115,7 +111,6 @@ var gibeeLib = {
     setHeightToScreen : function(elemId,others){
         /*
          * Seta altura do elemento para encaixar na altura da janela
-         *
          * var elemId = id do elemento que recebera a altura
          * var others = [ id_dos_demais_elementos , id_dos_demais_elementos ]
          * e = elemento DOM que receberá altura
@@ -131,12 +126,10 @@ var gibeeLib = {
             }
         }
 
-        //calcular e seta a altura
+        //calcular a altura
         var hScreen = window.innerHeight;
         var hElem = ( hScreen - hOthers - 1 );
         this.setHeight( elemId,hElem );
     }
 
 }
-
-
