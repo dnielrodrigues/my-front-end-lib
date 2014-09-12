@@ -20,6 +20,9 @@
         <meta property="og:url" content="http://www.exemplo.com.br/" />
         <meta property="og:site_name" content="Luz.vc" />
     <!-- /SEO -->
+    
+    <!-- CROSS BROWSER -->
+    <script src="http://polyfill.io"></script>
 </head>
 <body class="<?php echo $page; ?>">
 
