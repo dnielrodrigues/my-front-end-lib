@@ -23,55 +23,36 @@ a:visited{color:$cor-2;}
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-.colunas-1 {@include largura-coluna(1);  @extend .colunas;}
-.colunas-2 {@include largura-coluna(2);  @extend .colunas;}
-.colunas-3 {@include largura-coluna(3);  @extend .colunas;}
-.colunas-4 {@include largura-coluna(4);  @extend .colunas;}
-.colunas-5 {@include largura-coluna(5);  @extend .colunas;}
-.colunas-6 {@include largura-coluna(6);  @extend .colunas;}
-.colunas-7 {@include largura-coluna(7);  @extend .colunas;}
-.colunas-8 {@include largura-coluna(8);  @extend .colunas;}
-.colunas-9 {@include largura-coluna(9);  @extend .colunas;}
-.colunas-10{@include largura-coluna(10); @extend .colunas;}
-.colunas-11{@include largura-coluna(11); @extend .colunas;}
-.colunas-12{@include largura-coluna(12); @extend .colunas;}
-.colunas-13{@include largura-coluna(13); @extend .colunas;}
-.colunas-14{@include largura-coluna(14); @extend .colunas;}
-.colunas-15{@include largura-coluna(15); @extend .colunas;}
-.colunas-16{@include largura-coluna(16); @extend .colunas;}
+.colums-1 {@include largura-coluna(1);  @extend .colums;}
+.colums-2 {@include largura-coluna(2);  @extend .colums;}
+.colums-3 {@include largura-coluna(3);  @extend .colums;}
+.colums-4 {@include largura-coluna(4);  @extend .colums;}
+.colums-5 {@include largura-coluna(5);  @extend .colums;}
+.colums-6 {@include largura-coluna(6);  @extend .colums;}
+.colums-7 {@include largura-coluna(7);  @extend .colums;}
+.colums-8 {@include largura-coluna(8);  @extend .colums;}
+.colums-9 {@include largura-coluna(9);  @extend .colums;}
+.colums-10{@include largura-coluna(10); @extend .colums;}
+.colums-11{@include largura-coluna(11); @extend .colums;}
+.colums-12{@include largura-coluna(12); @extend .colums;}
+.colums-13{@include largura-coluna(13); @extend .colums;}
+.colums-14{@include largura-coluna(14); @extend .colums;}
+.colums-15{@include largura-coluna(15); @extend .colums;}
+.colums-16{@include largura-coluna(16); @extend .colums;}
 
 // BOX SIZING
-body{
+body,button,input{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
-/* CLASSES BASICAS */
-.b{border: none; color: #fff; font-size: 1.4em; line-height: 15px; margin: 0;display: block;float: left;text-decoration: none;cursor: pointer;padding: 15px;}
-.b-destaq{@extend .b;@extend .fonte-regular;/*background: $cor-primaria;*/display: block;}
-.b-pri{@extend .b;}
-.b-sec{@extend .b;background: #a4acb1;padding: 10px;margin: 10px;}
-.l{/*color: $cor-secundaria;*/text-decoration: underline;}
-.l-destaq{@extend .l;font-size: 1.6em;}
-.f{position: relative;}
-.c{padding: 10px;/*border: 1px solid $cor-borda;*/float: left;margin: 0;}
-.s{background: #ddd; border: none; height: 32px; margin: 0; padding: 0;}
-
-// ICONES
-.i{@extend .icon;cursor:pointer;margin: 0; padding: 0; border: 0;background: none;color: #ccc;display: block;overflow: hidden;}
-.i-big{@extend .i;font-size:6em;}
-.i-medium{@extend .i;font-size:4em; width: 15%;  height: 60px; }
-.i-small{@extend .i;font-size:2em;}
 
 /* TAGS */
 body{font-family: 'Open Sans'; font-style: normal; font-weight: 300;}
 strong{font-size: 1.2em;}
 select,input,button{outline: none;}
 p,li{font-size: 1.2em;line-height: 1.4em;}
-li{background: url(../imgs/marcador-li.jpg) no-repeat 0 5px; padding-left: 12px;}
-a{color:#ddd;text-decoration:none;font-size:1.4em;}
-a:hover{color:#999;text-decoration:none;}
+li{}
 h1,h2,h3,h4,h5,h6{font-style: normal; font-weight: 300;color:#333;}
 h1{font-size:3em}
 h2{font-size:2.6em}
@@ -79,15 +60,52 @@ h3{font-size:2.2em}
 h4{font-size:1.8em}
 h5{font-size:1.4em}
 h6{font-size:1em}
+a,button{font-size:1.4em;}
+button:hover,a:hover{color:$cor-5;text-decoration:none;background:$cor-3;}
+a:link{color:$cor-1;}
+a:hover{color:$cor-2;}
+a:active{color:$cor-1;}
+a:visited{color:$cor-2;}
+button{font-weight: normal; padding: 10px;border: none;cursor:pointer;text-decoration:none;}
+input[type=text],
+textarea{border: none; padding: 15px; font-size: 1.4em; font-weight: normal; line-height: 15px;}
 
 // ICONES
-.i{cursor:pointer;margin: 0; padding: 0; border: 0;background: none;color: #ccc;}
-.i-big{@extend .i;font-size:6em;}
-.i-medium{@extend .i;font-size:4em; width: 15%;  height: 60px; }
-.i-small{@extend .i;font-size:2em;}
+.i{@extend .icon;cursor:pointer;margin: 0; padding: 0; border: 0;background: none;color: #ccc;display: block;display: block; overflow: hidden;}
+.i-big{@extend .i;font-size:6em;height: 80px;width: 80px;line-height:80px;text-align: center;}
+.i-medium{@extend .i;font-size:4em; height: 60px;width: 60px;line-height:60px;text-align: center;}
+.i-small{@extend .i;font-size:2em;height: 40px;width: 40px;line-height:40px;text-align: center;}
 
+/* CLASSES BASICAS */
+.b{border: none; color: #fff; font-size: 1.4em; line-height: 15px; margin: 0;display: block;float: left;text-decoration: none;cursor: pointer;padding: 15px;}
+.b-destaq{@extend .b;@extend .font-regular;display: block;}
+.b-pri{@extend .b;}
+.b-sec{@extend .b;background: #a4acb1;padding: 10px;margin: 10px;}
+.l{text-decoration: underline;}
+.l-destaq{@extend .l;font-size: 1.6em;}
+.f{position: relative;}
+.c{padding: 10px;float: left;margin: 0;}
+.s{background: #ddd; border: none; height: 32px; margin: 0; padding: 0;}
 
-
+// TABS
+.tab-top{}
+.tab-bottom{}
+.b-tab-1{}
+.b-tab-2{}
+.b-tab-3{}
+.b-tab-4{}
+.b-tab-5{}
+.b-tab-6{}
+.b-tab-7{}
+.b-tab-8{}
+.b-tab-9{}
+.b-tab-10{}
+.b-tab-11{}
+.b-tab-12{}
+.b-tab-13{}
+.b-tab-14{}
+.b-tab-15{}
+.b-tab-16{}
 
 
 
